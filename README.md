@@ -11,7 +11,6 @@ README.txt
 
 ------- Folder Name :  Elasticsearch ------
 
-
 |_Question1.txt ------ GET method link and Search Query in each step for first question
 
 |_Question2.txt ------ GET method link and Search Query for second question
@@ -21,7 +20,7 @@ README.txt
 |_Question4.txt ------ GET method link and Search Query for fourth question
 
 ------- Folder Name : MySQL ------------
-|
+
 |_Normalize.sql ------ Queries for triming spaces in the relational database
 
 |_Question1.sql	------ Queries for first question
