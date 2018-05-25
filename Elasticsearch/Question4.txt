@@ -1,0 +1,11 @@
+GET : http://ec2-18-219-248-186.us-east-2.compute.amazonaws.com:9200/stoptimes/docs/_search?search_type=count
+
+{	
+	"query":
+		{
+		"match_phrase": 
+					 {
+						 "stop_id":"8643"
+					 }
+		}			
+}

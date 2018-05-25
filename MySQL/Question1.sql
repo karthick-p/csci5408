@@ -1,0 +1,2 @@
+use busDB;
+select distinct trip_headsign as BusName, route_id as BusRoute from trips where trip_id in (select distinct trip_id from stopTimes where stop_id in (Select stop_id from stops where name_stop ='Ferry Stop - Halifax'));

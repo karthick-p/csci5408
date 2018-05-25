@@ -1,0 +1,26 @@
+Step 1:
+
+GET :  http://ec2-18-219-248-186.us-east-2.compute.amazonaws.com:9200/trips/docs/_search
+{
+"query" : {
+        "bool": {
+            "must": [
+						{"match_phrase": { "route_id" : "10-121"}},
+						{"match_phrase": {"trip_headsign" : "10 WESTPHAL"}}
+					]
+				}
+		}
+}
+
+Step 2:
+
+GET : http://ec2-18-219-248-186.us-east-2.compute.amazonaws.com:9200/stoptimes/docs/_search
+{
+"query" :
+	{
+		"match_phrase": {"trip_id" : "6512794-2012_05M-1205BRwd-Weekday-02"}
+	}
+}
+															
+
+															

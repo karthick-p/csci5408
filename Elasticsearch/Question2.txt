@@ -1,0 +1,13 @@
+GET :  http://ec2-18-219-248-186.us-east-2.compute.amazonaws.com:9200/stoptimes/docs/_search
+
+{
+	"query" : {
+		"range" : {
+			"departure_time" :{
+				"gte" : "13:00:00" ,
+				"lte" : "14:00:00"
+			}
+			
+		}
+	}
+}

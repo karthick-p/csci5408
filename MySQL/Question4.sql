@@ -1,0 +1,2 @@
+use busDB;
+select a.name_stop as StopName,a.stop_id as StopID,b.counts as StopFrequency from stops a inner join (select stop_id, count(stop_id) as counts from stopTimes group by stop_id  ORDER by counts DESC LIMIT 3 )b on a.stop_id = b.stop_id ;

@@ -1,0 +1,51 @@
+	
+Step 1:	
+
+GET : http://ec2-18-219-248-186.us-east-2.compute.amazonaws.com:9200/stops/docs/_search
+	{	
+		"query":
+			{
+			"match_phrase": 
+						 {
+							 "name_stop":"Ferry Stop - Halifax"
+						 }
+			}			
+	}
+	
+Step 2 :
+
+GET : http://ec2-18-219-248-186.us-east-2.compute.amazonaws.com:9200/stoptimes/docs/_search
+
+{	
+	"query":
+		{
+			"match_phrase": 
+					 {
+						 "stop_id": "1073"
+					 }
+		}
+	}
+}
+
+
+Step 3 :
+
+GET : http://ec2-18-219-248-186.us-east-2.compute.amazonaws.com:9200/trips/docs/_search
+{
+"query" : {
+        "bool": {
+            "should": [
+               {"match_phrase": {"trip_id" : "5808164-2012_05M-12MferSU-Sunday-00"}},
+               { "match_phrase": {"trip_id" : "5808166-2012_05M-12MferSU-Sunday-00"}},
+				{"match_phrase": {"trip_id" : "6219188-2012_08A-12AferWD-Weekday-01"}},
+               { "match_phrase": {"trip_id" : "5808073-2012_05M-12MferSA-Saturday-00"}},
+				{"match_phrase": {"trip_id" : "6219239-2012_08A-12AferSA-Saturday-01"}},
+               { "match_phrase": {"trip_id" : "6219296-2012_08A-12AferSA-Saturday-01"}},
+				{"match_phrase": {"trip_id" : "6219311-2012_08A-12AferSU-Sunday-01"}},
+               { "match_phrase": {"trip_id" : "6302500-2012_05M-12MferHO-Sunday-00"}},
+				{"match_phrase": {"trip_id" : "6219340-2012_08A-12AferSU-Sunday-01"}},
+               { "match_phrase": {"trip_id" : "6219159-2012_08A-12AferWD-Weekday-01"}}
+            ]
+        }
+    }
+} 

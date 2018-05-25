@@ -1,0 +1,2 @@
+use busDB;
+select c.name_stop as StopName,b.trip_id as TripID,departure_time as Time,a.stop_id as StopID,a.stop_sequence as Sequence,b.route_id as RouteID,b.trip_headsign as BusName from stopTimes a  INNER JOIN (select trip_id , route_id, trip_headsign from trips where route_id='10-121' and trip_headsign='10 WESTPHAL')b on b.trip_id = a.trip_id inner join stops c on a.stop_id= c.stop_id order by b.trip_id;
