@@ -1,6 +1,6 @@
 # csci5408_assn1
 README.txt 
-------------------------
+----------- Start -------------
 
 ------- Folder Name : Dataset -----------
 
@@ -30,9 +30,5 @@ README.txt
 |_Question3.sql ------ Queries for third question
 
 |_Question4.sql ------ Queries for fourth question
-
-------- Assn1 report.pdf ---------
-
-Report for the assignment 1
 
 ------- END -----------
